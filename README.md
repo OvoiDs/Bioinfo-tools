@@ -29,3 +29,4 @@ Will generate:
 | Foobar  | 3   | 3    | 2   | 7    |
 
 Warning: data matrix must be row-name sorted. The program won't index rownames and it will assume that they always come in the same order.
+Warning2: this program isn't optimized ... it will consume a LOT of memory if you are playing with a lot of files
