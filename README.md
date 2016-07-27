@@ -1,6 +1,6 @@
 # Bioinfo-tools
 
-# interlace.py
+## interlace.py
 
 Tool used to merge data matrix by column.
 
@@ -30,3 +30,8 @@ Will generate:
 
 Warning: data matrix must be row-name sorted. The program won't index rownames and it will assume that they always come in the same order.
 Warning2: this program isn't optimized ... it will consume a LOT of memory if you are playing with a lot of files
+
+## pyVCF.py
+
+Tool used in order to synchronize variants from two or more VCF files. Adapted to plug before Sciclone or QuantumClone.
+Reads VCF files from any Tumor or Normal sample, looks up in BAM files for matching variants in any other sample, and outputs a result for every sample.
