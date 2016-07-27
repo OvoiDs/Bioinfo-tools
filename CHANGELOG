@@ -1,0 +1,9 @@
+# pyVCF
+
+Older versions: untracked.
+
+v1.1:
+
+* SciClone mode will output multiple files (one by sample)
+* Each variant will be looked up in every provided BAM files and information will be reported for each sample
+
