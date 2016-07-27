@@ -257,7 +257,8 @@ for v in variants:
         #print('{}:{} {} {} {}'.format(v.chr, v.pos, v.ref, v.alt, v.depth))
         #print('{}:{} {} {}'.format(dp_res[1], dp_res[2], dp_res[0], dp_res[3]))
         try:
-            toPush = {**dp_res[0], 'DP': dp_res[3]}
+            toPush = dp_res[0]
+            toPush['DP'] = dp_res[3]
         except:
             import pdb
             pdb.set_trace()
