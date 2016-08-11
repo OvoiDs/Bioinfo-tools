@@ -35,3 +35,14 @@ Warning2: this program isn't optimized ... it will consume a LOT of memory if yo
 
 Tool used in order to synchronize variants from two or more VCF files. Adapted to plug before Sciclone or QuantumClone.
 Reads VCF files from any Tumor or Normal sample, looks up in BAM files for matching variants in any other sample, and outputs a result for every sample.
+
+## Annotate_custom_rows.py
+
+Tool used to add genomic information stored in a flat file database bgziped and tabix indexed to a generic other file containing genomic information.
+Both files must be TSV-type files, though other separators may be really easy to implement.
+Takes in input two files (the one that you want to annotate and the database), indexes (the indexes of the genomic regions for the file that you want to annotate and the index of the columns that you want to
+add from your database). The program may remove trailing "chr" in order to ensure compatibility for all databases (in the same way, adding chr would be trivial, but I had no use for that).
+
+Ex: python Annotate_custom_rows.py -i svdetect.txt -o - -c 4-5,7-8 --db ./genes.gz --remove-trailing-chr --db-index 2,3
+=> This will take as genomic region input columns 4-5 and columns 7-8. The program will make it out for most situations, like chr3 in a first column, and 1:2 in a second column.
+
