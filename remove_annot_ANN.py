@@ -42,13 +42,13 @@ class Annotation(object):
         self.type = type_of_analysis
         
     #Here are defined the ranks for the different analysis paradigm
-    def rank(self, annotation, prioritize):
+    def rank(self, annotation, prioritize=False):
         add = 1
         if (prioritize == True):
             add = 1000
         if (self.type == "exonseq"):
             Very_High = re.compile(r"splice|gained|lost|frameshift|exon_loss_variant|disruptive_inframe|coding_sequence_variant|rare|inframe_insertion|inframe_deletion")
-            High = re.compile(r"missense_variant|initiator_codon_variant|stop_retained_variant")
+            High = re.compile(r"missense_variant|initiator_codon_variant|stop_retained_variant|protein_protein_contact")
             Low = re.compile(r"regulatory|non_coding|intron|UTR|upstream|downstream|intergenic")
             Medium = re.compile(r"synonymous_variant|start_retained|stop_retained_variant|intragenic_variant|transcript")
             #How informative exactly is that annotation ?? Well, in exome-seq, let's give it a Medium-Low weight, so we will give an advantage to Synonymous coding
