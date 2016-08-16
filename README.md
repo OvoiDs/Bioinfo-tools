@@ -46,3 +46,8 @@ add from your database). The program may remove trailing "chr" in order to ensur
 Ex: python Annotate_custom_rows.py -i svdetect.txt -o - -c 4-5,7-8 --db ./genes.gz --remove-trailing-chr --db-index 2,3
 => This will take as genomic region input columns 4-5 and columns 7-8. The program will make it out for most situations, like chr3 in a first column, and 1:2 in a second column.
 
+
+## remove_annot_*.py
+
+Those scripts helps filtering snpEff annotated (either EFF format or new ANN format) vcf files.
+They support either manual curation or batch removal of certain annotations.
