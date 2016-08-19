@@ -55,3 +55,4 @@ They support either manual curation or batch removal of certain annotations.
 ## try_mutload.sh
 
 Weird stuff that is supposed to help us filtering Integragen's variants... For now, we've tried like 10 different ways of filtering those variants and we still *NEVER* find the same number they find...
+Usage: bash try_mutload.sh <in.snp> <in.indels> <out.somatics>
