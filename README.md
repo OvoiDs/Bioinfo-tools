@@ -51,3 +51,7 @@ Ex: python Annotate_custom_rows.py -i svdetect.txt -o - -c 4-5,7-8 --db ./genes.
 
 Those scripts helps filtering snpEff annotated (either EFF format or new ANN format) vcf files.
 They support either manual curation or batch removal of certain annotations.
+
+## try_mutload.sh
+
+Weird stuff that is supposed to help us filtering Integragen's variants... For now, we've tried like 10 different ways of filtering those variants and we still *NEVER* find the same number they find...
