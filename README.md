@@ -56,3 +56,36 @@ They support either manual curation or batch removal of certain annotations.
 
 Weird stuff that is supposed to help us filtering Integragen's variants... For now, we've tried like 10 different ways of filtering those variants and we still *NEVER* find the same number they find...
 Usage: bash try_mutload.sh <in.snp> <in.indels> <out.somatics>
+
+## collapse_files.py
+
+This program will allow you to collapse N files by columns, without interlacing.
+
+
+Example:
+
+| RowName | Nb | Occ |
+|---------|----|-----|
+| Foo     | 4  | 4   |
+| Bar     | 3  | 3   |
+| Foobar  | 3  | 3   |
+
+and
+
+| RowName | Nb | Occ |
+|---------|----|-----|
+| Foo     | 8  | 1   |
+| Bar     | 2  | 4   |
+| Foobar  | 2  | 7   |
+
+Will generate:
+
+| RowName | Nb  | Occ  | RowName | Nb  | Occ  |
+|---------|-----|------|---------|-----|------|
+| Foo     | 4   | 4    | Foo     | 8   | 1    |
+| Bar     | 3   | 3    | Bar     | 2   | 4    |
+| Foobar  | 3   | 3    | Foobar  | 2   | 7    |
+
+I just now get that it's looking awfully like interlace.py ... 
+Well, this one is very memory efficient (reads only one line per file at a time).
+Warning: All files must have same number of lines

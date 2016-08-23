@@ -72,4 +72,3 @@ for el in zip(*w):
 	output.write("\n")
 	i = 1
 	k = 0
-		
