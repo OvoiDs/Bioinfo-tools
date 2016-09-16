@@ -35,9 +35,12 @@ for file in files:
 
 for fh in ifh:
 	lines.append(fh.readlines())
+	fh.close()
+del ifh
 
 for f in lines:
 	w.append([x.rstrip('\n').split('\t') for x in f])
+del lines
 
 ncols = len(w[0][0])
 
@@ -72,3 +75,4 @@ for el in zip(*w):
 	output.write("\n")
 	i = 1
 	k = 0
+		
